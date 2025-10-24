@@ -402,14 +402,12 @@ Wide</p>
 </div>
 <div id="exercise-2" class="section level2">
 <h2>Exercise 2</h2>
-<pre class="r"><code>## Uncomment and complete the following code
-
-#staff_long &lt;- ___ %&gt;%
-#  ___(
-#    cols = ____, 
-#    names_to = &quot;_____&quot;,
-#    values_to = &quot;percent&quot;
-#    )</code></pre>
+<pre class="r"><code>staff_long &lt;- staff %&gt;%
+  pivot_longer(
+    cols = c(&#39;1975&#39;, &#39;1989&#39;, &#39;1993&#39;, &#39;1995&#39;, &#39;1999&#39;, &#39;2001&#39;, &#39;2003&#39;, &#39;2005&#39;, &#39;2007&#39;, &#39;2009&#39;, &#39;2011&#39;), 
+    names_to = &quot;years&quot;,
+    values_to = &quot;percent&quot;
+   )</code></pre>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>
