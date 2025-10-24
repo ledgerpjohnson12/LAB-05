@@ -123,15 +123,19 @@ ggplot(data = staff_long,
 ## Exercise 5
 
 ```{r mutate-year}
-## Uncomment and complete the following code
 
-#staff_long <- staff_long %>%
-#  mutate(year = ______(year))
+
+staff_long <- staff_long %>%
+  mutate(year = as.numeric(year))
 ```
 
 
 ```{r working-line-plot}
-# Write your code for Exercise 5 here
+ggplot(staff_long,
+       aes(year,
+           percent,
+           colour=faculty_type))+
+  geom_line()
 
 
 
